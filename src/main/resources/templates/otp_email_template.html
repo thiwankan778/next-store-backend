@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Code</title>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td align="center">
+            <table border="0" cellspacing="0" cellpadding="0" width="600" style="border-collapse:collapse;">
+                <tr>
+                    <td style="background-color:#f2f0ff; padding: 20px 0;">
+                        <p style="font-weight: bold; color: black; font-family: Arial, sans-serif; text-align: center;font-size: 24px;">
+                            Your OTP Code</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:#ffffff; padding: 20px; border: 1px solid #e5e5e5;">
+                        <p style="color: #666; font-family: Arial, sans-serif;font-size: 18px;">Dear <span style="font-size: 18px;" th:text="${name}"></span>,</p>
+                        <p style="color: #666; font-family: Arial, sans-serif; font-size: 18px;">Your OTP code is: <span style="font-size: 20px;font-weight: bold;color:#f58802;" th:text="${otpCode}"></span></p>
+                        <p style="color: #666; font-family: Arial, sans-serif; ">This code is valid for 15 minutes. Please do not share it with anyone.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:#f2f0ff; padding: 20px 0;">
+                        <p style="color: #666; font-family: Arial, sans-serif; text-align: center;">Thank you for using our service.</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
