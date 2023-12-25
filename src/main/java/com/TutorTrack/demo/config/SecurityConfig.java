@@ -59,7 +59,7 @@ public class SecurityConfig {
                         "/auth/verify-otp","/auth/resend-otp/{email}",
                         "/auth/find-user-exist/{email}","/auth/reset-password",
                         "/auth/logout/{userId}","/store/get-all-stores-public",
-                        "/get-category-list/public").permitAll()
+                        "/get-category-list/public","/create/product/{id}","/product/public","/product/{productId}").permitAll()
                 .and()
                 .authorizeHttpRequests().requestMatchers("/auth/user/**").authenticated()
                 .and()
@@ -68,7 +68,7 @@ public class SecurityConfig {
                         "/store/update-store/{id}","/store/temp-delete/{id}","/store/recover-store/{id}",
                         "/store/delete-store/{id}","/create-main-category",
                         "/update-main-category/{id}","/create-sub-category/{mainCategoryId}",
-                        "/update-sub-category/{subCategoryId}","/get-category-list").authenticated()
+                        "/update-sub-category/{subCategoryId}","/get-category-list","/product/**","/product/private").authenticated()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

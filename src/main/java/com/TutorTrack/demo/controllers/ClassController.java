@@ -13,7 +13,7 @@ public class ClassController {
 
     @GetMapping("/get")
     public ResponseEntity<?> fetchAllClasses(){
-        return  new ResponseEntity<>("this is sequired end point", HttpStatus.OK);
+        return  new ResponseEntity<>("this is secured end point", HttpStatus.OK);
 
     }
 }

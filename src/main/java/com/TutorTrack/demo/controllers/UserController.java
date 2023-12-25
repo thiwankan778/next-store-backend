@@ -214,6 +214,8 @@ public class UserController {
         return new ResponseEntity<>(response,HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
+
+
     @PostMapping("/resend-otp/{email}")
     public ResponseEntity<?> resendOtp(@PathVariable String email){
         DefaultResponse response=service.resendOtp(email);
